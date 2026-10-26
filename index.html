@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎃 RHSFL | S1 | WEEK 1</title>
+<style>
+:root{--bg:#08080b;--panel:#121116;--panel2:#19171c;--text:#f6f4f7;--muted:#a6a3ad;--orange:#ff963d;--blue:#4169f5;--line:#2b282e;--green:#67d58b;--red:#ff6767}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.shell{max-width:none;margin:0;padding:0 28px 0 288px}.topbar{position:fixed;z-index:8;left:0;top:0;width:260px;height:82px;display:flex;align-items:center;justify-content:flex-start;gap:18px;padding:18px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);background:#0b0a0d}.brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.04em;font-size:14px}.brandmark{display:grid;place-items:center;width:38px;height:38px;border-radius:14px;background:linear-gradient(135deg,#ffb14c,#fa542b);font-size:24px;box-shadow:0 0 30px #ff7b2b24}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.17em;margin-top:2px}.season{display:none;color:#ffc07a;font-weight:800;font-size:12px;border:1px solid #51331e;border-radius:99px;padding:8px 12px;white-space:nowrap}.hero{margin:0 0 30px;min-height:330px;position:relative;overflow:hidden;border:0;border-radius:0;background:none;display:flex;align-items:center;padding:32px 0}.hero:after{display:none}.hero-content{position:relative;z-index:1;max-width:650px}.eyebrow{color:#ffab60;text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.22em}.hero h1{font-size:clamp(42px,6vw,76px);line-height:.96;margin:15px 0 18px;letter-spacing:-.055em;text-transform:uppercase}.hero h1 span{display:block;background:linear-gradient(100deg,#ffb14c 0%,#ff7829 45%,#b45edb 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{font-size:18px;line-height:1.6;color:#c3bec7;max-width:560px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:1px solid var(--line);border-radius:13px;background:#17151a;color:white;padding:13px 18px;font-weight:800}.btn.primary{background:var(--blue);border-color:var(--blue);box-shadow:0 8px 28px #4169f52a}.btn.orange{background:var(--orange);border-color:var(--orange);color:#1b1007}.btn.ghost{background:transparent}.btn.small{padding:8px 11px;font-size:13px;border-radius:10px}.section{margin:34px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}.section-head h2{font-size:23px;margin:0}.section-head p{margin:6px 0 0;color:var(--muted);font-size:14px}.kicker{color:var(--muted);font-size:11px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.stat-card,.panel,.team-card{background:linear-gradient(145deg,#17151a,#0f0e12);border:1px solid var(--line);border-radius:18px;padding:18px}.stat-card .num{font-size:32px;font-weight:900;letter-spacing:-.04em}.stat-card .label{color:var(--muted);font-size:13px;margin-top:4px}.team-list{border:1px solid #352719;background:#100e0d;border-radius:22px;overflow:hidden}.team-row{display:grid;grid-template-columns:44px 46px minmax(120px,1fr) 80px 65px;gap:13px;align-items:center;padding:16px 20px;border-bottom:1px solid #282322}.team-row:last-child{border-bottom:0}.rank{color:#aaa5b0;font-weight:900;font-size:20px;text-align:center}.logo{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:1000;border:1px solid #ffffff24;box-shadow:inset 0 0 0 4px #ffffff08;overflow:hidden;background:#222}.logo img{width:100%;height:100%;object-fit:contain;background:#fff}.team-name{font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.team-sub{color:var(--muted);font-size:12px;margin-top:4px}.record,.points{font-variant-numeric:tabular-nums;color:#c2bec8;text-align:right}.tabs{position:fixed;left:0;top:82px;bottom:0;z-index:8;width:260px;display:flex;flex-direction:column;align-items:stretch;gap:3px;overflow:auto;padding:14px 12px 20px;background:#0b0a0d;border-right:1px solid var(--line);backdrop-filter:blur(12px)}.tab{flex:0 0 auto;text-align:left;border:1px solid transparent;background:transparent;color:#aaa6b0;border-radius:10px;padding:12px 13px;font-size:13px;font-weight:800}.tab.active{color:#fff;background:#f05a08;border-color:#f05a08;box-shadow:0 7px 20px #f05a0830}.view{display:none}.view.active{display:block}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px}.table{border-collapse:collapse;width:100%;min-width:570px}.table th,.table td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);font-size:14px}.table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;background:#17151a}.table tr:last-child td{border-bottom:0}.pill{display:inline-block;border:1px solid #39343e;border-radius:99px;padding:4px 8px;color:#c6c0cb;font-size:11px;font-weight:800}.schedule-item{display:grid;grid-template-columns:100px 1fr auto;align-items:center;gap:15px;padding:15px 0;border-bottom:1px solid var(--line)}.schedule-item:last-child{border-bottom:0}.date{color:var(--orange);font-size:12px;font-weight:900}.matchup{font-weight:800}.matchup small{display:block;color:var(--muted);font-weight:500;margin-top:4px}.score{font-weight:900;white-space:nowrap}.field{display:grid;gap:6px;margin-bottom:12px}.field label{font-size:12px;color:#bdb7c3;font-weight:800}.field input,.field select,.field textarea{width:100%;border:1px solid #39343e;background:#0b0a0e;color:#fff;border-radius:10px;padding:11px 12px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue)}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.notice{padding:13px 15px;border:1px solid #63401f;background:#20160f;color:#ffd0a0;border-radius:12px;font-size:13px;line-height:1.5;margin:12px 0}.success{border-color:#24563b;background:#0f2117;color:#a9f0c2}.admin-layout{display:grid;grid-template-columns:230px 1fr;gap:18px}.admin-menu{display:grid;align-content:start;gap:8px}.admin-menu button{text-align:left}.hidden{display:none!important}.empty{padding:28px;text-align:center;color:var(--muted)}.footer{border-top:1px solid var(--line);margin-top:48px;padding:25px 0 105px;color:#77727e;font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.mobile-nav{display:none}.fine{font-size:12px;color:var(--muted);line-height:1.5}.inline-actions{display:flex;gap:8px;flex-wrap:wrap}.danger{color:#ff9a9a;border-color:#683333}.admin-status{color:var(--green);font-size:12px;font-weight:800}
+@media(max-width:850px){.shell{padding:0 22px 0 282px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.admin-layout{grid-template-columns:1fr}.admin-menu{grid-template-columns:repeat(3,1fr)}.admin-menu button{text-align:center}.hero{min-height:390px;background-position:60% center}.team-row{grid-template-columns:30px 40px minmax(100px,1fr) 55px;gap:9px;padding:13px 10px}.team-row .points{display:none}.team-row .logo{width:38px;height:38px}.schedule-item{grid-template-columns:75px 1fr auto;gap:8px}}
+@media(max-width:560px){.shell{padding:0 13px}.topbar{position:relative;left:auto;top:auto;width:auto;height:auto;padding:13px 0;border-right:0;background:transparent}.season{font-size:10px;padding:7px 9px}.brand{font-size:13px}.brandmark{width:38px;height:38px}.hero{border-radius:20px;padding:24px 20px;min-height:410px;background-image:linear-gradient(90deg,#08080bf5 0%,#08080bd9 65%,#08080b85 100%),url('assets/rhsfl-halloween-football.png')}.hero p{font-size:15px}.section-head h2{font-size:20px}.team-row .team-sub{display:none}.cards{gap:9px}.stat-card{padding:14px}.stat-card .num{font-size:27px}.form-grid{grid-template-columns:1fr}.footer{padding-bottom:95px}.mobile-nav{position:fixed;z-index:10;bottom:0;left:0;right:0;display:flex;justify-content:space-around;background:#0d0c10f5;border-top:1px solid #342f39;padding:9px 4px calc(9px + env(safe-area-inset-bottom));backdrop-filter:blur(14px)}.mobile-nav button{background:none;border:0;color:#827d89;font-size:10px;font-weight:800;display:grid;justify-items:center;gap:4px;min-width:0}.mobile-nav button span{font-size:19px}.mobile-nav button.active{color:var(--orange)}.tabs{display:none}.hero{min-height:350px;padding:25px 0;background:none}.schedule-item{grid-template-columns:63px 1fr}.schedule-item .score{grid-column:2}.admin-menu{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="topbar">
+  <div class="brand"><div class="brandmark">🎃</div><div>RHSFL <small>HIGH SCHOOL FOOTBALL LEAGUE</small></div></div>
+  <div class="season">S1 · WEEK 1</div>
+</header>
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">The road to the championship</div>
+    <h1><span>HIGH SCHOOL</span> FOOTBALL</h1>
+    <p>The premier high school football rankings. 12 teams. 3 tiers. One champion.</p>
+    <div class="actions"><button class="btn primary" data-go="standings">View Rankings ↗</button><button class="btn ghost" data-go="leaders">Stat Leaders</button></div>
+  </div>
+</section>
+<nav class="tabs" id="tabs">
+  <button class="tab active" data-view="home">⌂ &nbsp; Home</button>
+  <button class="tab" data-view="teams">♢ &nbsp; Teams</button>
+  <button class="tab" data-view="players">♙ &nbsp; Players</button>
+  <button class="tab" data-view="schedule">▦ &nbsp; Schedule</button>
+  <button class="tab" data-view="standings">☷ &nbsp; Standings</button>
+  <button class="tab" data-view="scores">⊙ &nbsp; Scores</button>
+  <button class="tab" data-view="leaders">▥ &nbsp; Position Leaders</button>
+  <button class="tab" data-view="leaders">▦ &nbsp; Stat Leaders</button>
+  <button class="tab" data-view="playoff">♜ &nbsp; Playoff</button>
+  <button class="tab" data-view="admin">♙ &nbsp; Admin</button>
+</nav>
+
+<main>
+<section class="view active" id="view-home">
+  <div class="cards">
+    <div class="stat-card"><div class="kicker">League teams</div><div class="num" id="statTeams">12</div><div class="label">Competing this season</div></div>
+    <div class="stat-card"><div class="kicker">Games played</div><div class="num" id="statGames">0</div><div class="label">Results entered</div></div>
+    <div class="stat-card"><div class="kicker">Players listed</div><div class="num" id="statPlayers">0</div><div class="label">Roster & stat leaders</div></div>
+    <div class="stat-card"><div class="kicker">Season</div><div class="num">S1</div><div class="label" id="weekLabel">Week 1</div></div>
+  </div>
+  <section class="section">
+    <div class="section-head"><div><div class="kicker">The contenders</div><h2>Top ranked teams</h2><p>Rankings update when the league owner changes them.</p></div><button class="btn small ghost" data-go="standings">Full rankings →</button></div>
+    <div class="team-list" id="topTeams"></div>
+  </section>
+  <section class="section two-col">
+    <div class="panel"><div class="section-head"><div><div class="kicker">Coming up</div><h2>Next games</h2></div><button class="btn small ghost" data-go="schedule">Full schedule</button></div><div id="homeSchedule"></div></div>
+    <div class="panel"><div class="section-head"><div><div class="kicker">Player spotlight</div><h2>Mr. Football watch</h2></div><button class="btn small ghost" data-go="players">Players</button></div><div id="mrWatch" class="empty">No players have been added yet. The league owner can add players from Admin.</div></div>
+  </section>
+</section>
+
+<section class="view" id="view-teams">
+  <div class="section-head"><div><div class="kicker">League directory</div><h2>Teams</h2><p>Team logos, athletic directors, records, and ranking.</p></div></div>
+  <div class="cards" id="teamCards"></div>
+</section>
+<section class="view" id="view-players">
+  <div class="section-head"><div><div class="kicker">Roster & recognition</div><h2>Players</h2><p>Player profiles and season statistics.</p></div></div>
+  <div class="panel"><div class="table-wrap"><table class="table"><thead><tr><th>Player</th><th>Team</th><th>Position</th><th>Year</th><th>Stats</th><th>Mr. Football</th></tr></thead><tbody id="playersTable"></tbody></table></div><div id="playersEmpty" class="empty">No players listed yet. The owner can add player profiles in Admin.</div></div>
+</section>
+<section class="view" id="view-standings">
+  <div class="section-head"><div><div class="kicker">Season 1</div><h2>Team rankings & standings</h2><p>Official order, win-loss records, and points.</p></div></div>
+  <div class="panel"><div class="table-wrap"><table class="table"><thead><tr><th>Rank</th><th>Team</th><th>Record</th><th>Points for</th><th>Points against</th><th>Win %</th></tr></thead><tbody id="standingsTable"></tbody></table></div></div>
+</section>
+<section class="view" id="view-schedule">
+  <div class="section-head"><div><div class="kicker">Game day</div><h2>League schedule</h2><p>Upcoming matchups and final scores entered by league staff.</p></div></div>
+  <div class="panel" id="scheduleList"></div>
+</section>
+<section class="view" id="view-scores">
+  <div class="section-head"><div><div class="kicker">Game results</div><h2>Scores</h2><p>Final scores and completed matchups entered by the league.</p></div></div>
+  <div class="panel" id="scoreList"></div>
+</section>
+<section class="view" id="view-playoff">
+  <div class="section-head"><div><div class="kicker">Road to the title</div><h2>RHSFL Playoffs</h2><p>Playoff matchups will appear here as the bracket is set.</p></div></div>
+  <div class="panel" id="playoffList"></div>
+</section>
+<section class="view" id="view-leaders">
+  <div class="section-head"><div><div class="kicker">On the field</div><h2>Position leaders</h2><p>Stat leaders are based on the player statistics entered by the league.</p></div></div>
+  <div class="cards" id="leaderCards"></div>
+</section>
+<section class="view" id="view-admin">
+  <div class="section-head"><div><div class="kicker">League control room</div><h2>Admin panel</h2><p>Manage teams, records, rankings, player profiles, schedules, and staff.</p></div></div>
+  <div id="authArea" class="panel">
+    <div class="notice">This downloadable website is a local prototype. The first setup creates an owner password on this browser. For a public launch, connect real server-side authentication and a database before using sensitive admin controls.</div>
+    <div id="setupArea" class="hidden">
+      <h3>Set up the league owner</h3><p class="fine">Create your owner password. Only the owner account can grant or remove admin roles.</p>
+      <div class="form-grid"><div class="field"><label>Owner username</label><input id="setupUser" value="RHSFL Owner" autocomplete="username"></div><div class="field"><label>Create owner password</label><input id="setupPass" type="password" placeholder="Choose a password" autocomplete="new-password"></div></div>
+      <button class="btn orange" id="setupBtn">Create owner account</button>
+    </div>
+    <div id="loginArea">
+      <h3>Staff sign-in</h3><div class="form-grid"><div class="field"><label>Username</label><input id="loginUser" autocomplete="username" placeholder="Owner or approved admin"></div><div class="field"><label>Password</label><input id="loginPass" type="password" autocomplete="current-password" placeholder="Password"></div></div>
+      <button class="btn primary" id="loginBtn">Sign in</button><p id="loginMessage" class="fine"></p>
+    </div>
+  </div>
+  <div id="adminArea" class="hidden">
+    <div class="panel" style="margin-bottom:15px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div><div class="admin-status" id="signedAs">SIGNED IN</div><div class="fine">Edits are saved in this browser.</div></div><button class="btn small ghost" id="logoutBtn">Sign out</button></div>
+    <div class="admin-layout">
+      <div class="admin-menu">
+        <button class="btn small primary" data-admin-tab="records">Records & Rankings</button><button class="btn small" data-admin-tab="teams">Teams & Logos</button><button class="btn small" data-admin-tab="schedule">Schedule</button><button class="btn small" data-admin-tab="players">Players & Stats</button><button class="btn small" data-admin-tab="staff" id="staffTab">Owner: Staff Roles</button>
+      </div>
+      <div>
+        <div class="admin-pane" id="admin-records">
+          <div class="panel"><h3>Edit records & rankings</h3><p class="fine">Set a team's rank, win-loss-tie record, and points. Save each row.</p><div class="table-wrap"><table class="table"><thead><tr><th>Team</th><th>Rank</th><th>W</th><th>L</th><th>T</th><th>PF</th><th>PA</th><th></th></tr></thead><tbody id="recordEditor"></tbody></table></div></div>
+        </div>
+        <div class="admin-pane hidden" id="admin-teams">
+          <div class="panel"><h3>Add or edit a team</h3><input id="teamEditId" type="hidden"><div class="form-grid"><div class="field"><label>Team name</label><input id="teamName" placeholder="School / team name"></div><div class="field"><label>Short name / logo initials</label><input id="teamShort" placeholder="e.g. LKN"></div><div class="field"><label>Team color</label><input id="teamColor" type="color" value="#ff963d"></div><div class="field"><label>Logo image URL (optional)</label><input id="teamLogo" placeholder="https://.../logo.png"></div><div class="field"><label>Athletic Director</label><input id="teamAD" placeholder="@username"></div><div class="field"><label>Tier</label><select id="teamTier"><option>Tier 1</option><option>Tier 2</option><option>Tier 3</option></select></div></div><div class="inline-actions"><button class="btn orange" id="saveTeamBtn">Save team</button><button class="btn" id="clearTeamBtn">Clear</button></div><hr style="border:0;border-top:1px solid var(--line);margin:20px 0"><div id="teamEditorList"></div></div>
+        </div>
+        <div class="admin-pane hidden" id="admin-schedule">
+          <div class="panel"><h3>Add a game / enter a result</h3><input id="gameEditId" type="hidden"><div class="form-grid"><div class="field"><label>Week</label><input id="gameWeek" value="Week 1"></div><div class="field"><label>Date & time</label><input id="gameDate" placeholder="Oct 30 · 7:00 PM"></div><div class="field"><label>Home team</label><select id="gameHome"></select></div><div class="field"><label>Away team</label><select id="gameAway"></select></div><div class="field"><label>Home score (leave blank if not played)</label><input id="gameHomeScore" type="number" min="0" placeholder="—"></div><div class="field"><label>Away score</label><input id="gameAwayScore" type="number" min="0" placeholder="—"></div><div class="field"><label>Location</label><input id="gameLocation" placeholder="Home field / stadium"></div><div class="field"><label>Status</label><select id="gameStatus"><option>Scheduled</option><option>Final</option><option>Postponed</option></select></div></div><div class="inline-actions"><button class="btn orange" id="saveGameBtn">Save game</button><button class="btn" id="clearGameBtn">Clear</button></div><div id="gameEditorList" style="margin-top:18px"></div></div>
+        </div>
+        <div class="admin-pane hidden" id="admin-players">
+          <div class="panel"><h3>Add or edit a player</h3><input id="playerEditId" type="hidden"><div class="form-grid"><div class="field"><label>Player name</label><input id="playerName" placeholder="Full name"></div><div class="field"><label>Team</label><select id="playerTeam"></select></div><div class="field"><label>Position</label><select id="playerPos"><option>QB</option><option>RB</option><option>WR</option><option>TE</option><option>OL</option><option>DL</option><option>LB</option><option>CB</option><option>S</option><option>K</option><option>P</option></select></div><div class="field"><label>Class year</label><select id="playerYear"><option>Freshman</option><option>Sophomore</option><option>Junior</option><option>Senior</option></select></div><div class="field"><label>Passing yards</label><input id="statPass" type="number" min="0" value="0"></div><div class="field"><label>Rushing yards</label><input id="statRush" type="number" min="0" value="0"></div><div class="field"><label>Receiving yards</label><input id="statRec" type="number" min="0" value="0"></div><div class="field"><label>Touchdowns</label><input id="statTD" type="number" min="0" value="0"></div></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0 16px"><input type="checkbox" id="playerMr"> Mark as a Mr. Football candidate</label><div class="inline-actions"><button class="btn orange" id="savePlayerBtn">Save player</button><button class="btn" id="clearPlayerBtn">Clear</button></div><div id="playerEditorList" style="margin-top:18px"></div></div>
+        </div>
+        <div class="admin-pane hidden" id="admin-staff">
+          <div class="panel"><h3>Owner-only staff roles</h3><div class="notice">Only the league owner can grant or remove admin access. Approved admins can edit league information but cannot manage staff roles.</div><div class="form-grid"><div class="field"><label>New admin username</label><input id="newAdminUser" placeholder="Discord / website username"></div><div class="field"><label>Temporary password</label><input id="newAdminPass" type="password" placeholder="Create a password"></div></div><button class="btn orange" id="addAdminBtn">Grant admin role</button><div id="staffList" style="margin-top:18px"></div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3>Change owner password</h3><div class="field"><label>New owner password</label><input id="ownerNewPass" type="password" placeholder="New password"></div><button class="btn" id="changeOwnerPass">Update owner password</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="footer"><span>🎃 RHSFL · Season 1 · Week 1</span><span>Unofficial league hub · Built for the league community</span></footer>
+</div>
+<nav class="mobile-nav"><button class="active" data-view="home"><span>⌂</span>Home</button><button data-view="teams"><span>🛡</span>Teams</button><button data-view="players"><span>♙</span>Players</button><button data-view="standings"><span>☷</span>Standings</button><button data-view="schedule"><span>▦</span>Schedule</button><button data-view="admin"><span>⚙</span>Admin</button></nav>
+<script>
+const initialTeams=[
+{name:"North Crowley Panthers",short:"NC",color:"#1729e9",ad:"@5",tier:"Tier 1",rank:1,w:0,l:0,t:0,pf:0,pa:0,logo:""},
+{name:"Duncanville Panthers",short:"D",color:"#3e78a8",ad:"@notkarter",tier:"Tier 1",rank:2,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-duncanville.png"},
+{name:"IMG Academy",short:"IMG",color:"#3984f6",ad:"@Zen Dellea♠",tier:"Tier 1",rank:3,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-img-academy.png"},
+{name:"Waxahachie Indians",short:"W",color:"#347e31",ad:"",tier:"Tier 1",rank:4,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-waxahachie.png"},
+{name:"St. Frances Academy",short:"SFA",color:"#d4b43c",ad:"@letzd iee",tier:"Tier 1",rank:5,w:0,l:0,t:0,pf:0,pa:0,logo:""},
+{name:"DeSoto Eagles",short:"DE",color:"#b7a35b",ad:"@Rockstar2",tier:"Tier 1",rank:6,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-desoto.png"},
+{name:"St. Thomas Aquinas",short:"STA",color:"#f0c84e",ad:"@notplayin_mod",tier:"Tier 2",rank:7,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-st-thomas.png"},
+{name:"Saraland Spartans",short:"SS",color:"#d9362c",ad:"@Lawz / MOD",tier:"Tier 2",rank:8,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-saraland.png"},
+{name:"Lakeland",short:"L",color:"#e87b37",ad:"@YPK",tier:"Tier 2",rank:9,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-lakeland.png"},
+{name:"Southlake Carroll",short:"SC",color:"#47ad42",ad:"@JAYY",tier:"Tier 2",rank:10,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-southlake.png"},
+{name:"Don Bosco Prep",short:"DB",color:"#a9445c",ad:"@jsoo3",tier:"Tier 3",rank:11,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-don-bosco.png"},
+{name:"American Heritage",short:"AH",color:"#e7c34d",ad:"",tier:"Tier 3",rank:12,w:0,l:0,t:0,pf:0,pa:0,logo:"assets/logo-american-heritage.png"}
+];
+initialTeams.forEach((team, index) => team.id = "team" + (index + 1));
+const defaultState={teams:initialTeams,players:[],games:[],week:"Week 1",auth:{owner:null,admins:[]}};
+let state;try{state=JSON.parse(localStorage.getItem("rhsfl_state_v2"))||structuredClone(defaultState)}catch(e){state=JSON.parse(JSON.stringify(defaultState))}
+let currentUser=null,currentRole=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const save=()=>{localStorage.setItem("rhsfl_state_v2",JSON.stringify(state));render()};
+const sortedTeams=()=>[...state.teams].sort((a,b)=>(+a.rank||999)-(+b.rank||999));
+const teamById=id=>state.teams.find(t=>t.id===id);
+const logo=t=>t.logo?`<div class="logo"><img src="${esc(t.logo)}" alt="${esc(t.name)} logo" onerror="this.parentElement.innerHTML='${esc(t.short||'HS')}'"></div>`:`<div class="logo" style="color:${esc(t.color)};border-color:${esc(t.color)}66">${esc(t.short||'HS')}</div>`;
+const rec=t=>`${+t.w||0}–${+t.l||0}${+t.t?`–${+t.t}`:""}`;
+function go(view){document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+view));document.querySelectorAll("[data-view]").forEach(b=>b.classList.toggle("active",b.dataset.view===view));window.scrollTo({top:0,behavior:"smooth"});if(view==="admin")checkAuthUI()}
+document.querySelectorAll("[data-view]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.view)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go)));
+function render(){
+ $("statTeams").textContent=state.teams.length;$("statGames").textContent=state.games.filter(g=>g.status==="Final").length;$("statPlayers").textContent=state.players.length;$("weekLabel").textContent=state.week||"Week 1";
+ const rows=sortedTeams();
+ $("topTeams").innerHTML=rows.slice(0,5).map((t,i)=>`<div class="team-row"><div class="rank">${i+1}</div>${logo(t)}<div><div class="team-name">${esc(t.name)}</div><div class="team-sub">${esc(t.tier||"RHSFL")}</div></div><div class="record">${rec(t)}</div><div class="points">${+t.pf||0} PF</div></div>`).join("");
+ $("teamCards").innerHTML=rows.map(t=>`<div class="team-card"><div style="display:flex;align-items:center;gap:12px">${logo(t)}<div><div class="team-name">${esc(t.name)}</div><div class="team-sub">${esc(t.tier||"RHSFL")} · Rank #${+t.rank||"—"}</div></div></div><div style="display:flex;justify-content:space-between;margin-top:18px"><span class="pill">${rec(t)}</span><span class="fine">${esc(t.ad||"Athletic Director TBD")}</span></div></div>`).join("");
+ $("standingsTable").innerHTML=rows.map(t=>`<tr><td><b>#${+t.rank||"—"}</b></td><td><div style="display:flex;align-items:center;gap:10px">${logo(t)}<b>${esc(t.name)}</b></div></td><td>${rec(t)}</td><td>${+t.pf||0}</td><td>${+t.pa||0}</td><td>${(+t.w||0)+(+t.l||0)+(+t.t||0)?(((+t.w||0)/((+t.w||0)+(+t.l||0)+(+t.t||0)))*100).toFixed(1)+"%":"—"}</td></tr>`).join("");
+ const games=[...state.games].sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+ const gameHTML=g=>`<div class="schedule-item"><div class="date">${esc(g.week||"Week 1")}<br><span style="color:var(--muted);font-weight:500">${esc(g.date||"Date TBD")}</span></div><div class="matchup">${esc(teamById(g.home)?.name||"Home team")} <span style="color:var(--orange)">vs</span> ${esc(teamById(g.away)?.name||"Away team")}<small>${esc(g.location||"Location TBD")} · <span class="pill">${esc(g.status||"Scheduled")}</span></small></div><div class="score">${g.status==="Final"?`${esc(g.homeScore)} – ${esc(g.awayScore)}`:"—"}</div></div>`;
+ $("homeSchedule").innerHTML=games.length?games.slice(0,3).map(gameHTML).join(""):'<div class="empty">No games scheduled yet. Add the first matchup in Admin.</div>';
+ $("scheduleList").innerHTML=games.length?games.map(gameHTML).join(""):'<div class="empty">No games scheduled yet. The owner or an approved admin can add the schedule.</div>';
+ $("scoreList").innerHTML=games.filter(g=>g.status==="Final").map(gameHTML).join("")||'<div class="empty">No final scores entered yet.</div>';
+ const playoffTeams=rows.slice(0,4);
+ $("playoffList").innerHTML=playoffTeams.length>=4?`<div class="two-col"><div class="team-card"><div class="kicker">Semifinal 1</div><div class="matchup">${esc(playoffTeams[0].name)} vs ${esc(playoffTeams[3].name)}</div><small class="team-sub">Seed 1 vs Seed 4</small></div><div class="team-card"><div class="kicker">Semifinal 2</div><div class="matchup">${esc(playoffTeams[1].name)} vs ${esc(playoffTeams[2].name)}</div><small class="team-sub">Seed 2 vs Seed 3</small></div></div><div class="notice">Projected bracket from current rankings. Update rankings and enter official playoff games in Admin.</div>`:'<div class="empty">Add at least four teams to display a projected playoff bracket.</div>';
+ const players=state.players;
+ $("playersTable").innerHTML=players.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${esc(teamById(p.team)?.name||"—")}</td><td>${esc(p.pos)}</td><td>${esc(p.year)}</td><td>PASS ${+p.pass||0} · RUSH ${+p.rush||0} · REC ${+p.rec||0} · TD ${+p.td||0}</td><td>${p.mr?'<span class="pill">Candidate</span>':"—"}</td></tr>`).join("");
+ $("playersEmpty").classList.toggle("hidden",players.length>0);
+ const mr=players.filter(p=>p.mr).sort((a,b)=>(+b.td||0)-(+a.td||0));
+ $("mrWatch").innerHTML=mr.length?mr.slice(0,3).map(p=>`<div class="schedule-item"><div class="date">${esc(p.pos)}</div><div class="matchup">${esc(p.name)}<small>${esc(teamById(p.team)?.name||"")}</small></div><div class="score">${+p.td||0} TD</div></div>`).join(""):'<div class="empty">No players have been added yet. The league owner can add player profiles from Admin.</div>';
+ const positions=["QB","RB","WR","TE","DEF","Mr. Football"];
+ $("leaderCards").innerHTML=positions.map(pos=>{let list=players.filter(p=>pos==="DEF"?["DL","LB","CB","S"].includes(p.pos):pos==="Mr. Football"?p.mr:p.pos===pos);let sortKey=pos==="QB"?"pass":pos==="RB"?"rush":pos==="WR"||pos==="TE"?"rec":"td";list.sort((a,b)=>(+b[sortKey]||0)-(+a[sortKey]||0));let p=list[0];return `<div class="stat-card"><div class="kicker">${esc(pos)}</div>${p?`<div style="font-weight:900;font-size:19px">${esc(p.name)}</div><div class="label">${esc(teamById(p.team)?.name||"")}</div><div class="num" style="font-size:26px;margin-top:12px">${pos==="QB"?+p.pass||0:pos==="RB"?+p.rush||0:pos==="WR"||pos==="TE"?+p.rec||0:+p.td||0}</div><div class="label">${pos==="QB"?"Passing yards":pos==="RB"?"Rushing yards":pos==="WR"||pos==="TE"?"Receiving yards":"Touchdowns"}</div>`:`<div class="num" style="font-size:22px">—</div><div class="label">No stats entered</div>`}</div>`}).join("");
+ fillSelects();renderAdminLists();
+}
+function fillSelects(){
+ const opts=state.teams.map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join("");
+ ["gameHome","gameAway","playerTeam"].forEach(id=>{let el=$(id),old=el.value;el.innerHTML=opts;if([...el.options].some(o=>o.value===old))el.value=old});
+}
+function checkAuthUI(){
+ const owner=state.auth?.owner;
+ $("setupArea").classList.toggle("hidden",!!owner);
+ $("loginArea").classList.toggle("hidden",!owner || !!currentUser);
+ $("adminArea").classList.toggle("hidden",!currentUser);
+ if(currentUser){$("signedAs").textContent=`SIGNED IN AS ${currentUser} · ${currentRole.toUpperCase()}`;$("staffTab").classList.toggle("hidden",currentRole!=="owner");document.querySelector('[data-admin-tab="staff"]').classList.toggle("hidden",currentRole!=="owner");}
+}
+$("setupBtn").onclick=()=>{const user=$("setupUser").value.trim(),pass=$("setupPass").value;if(!user||pass.length<8){alert("Enter a username and a password with at least 8 characters.");return}state.auth.owner={user,pass};save();currentUser=user;currentRole="owner";checkAuthUI();alert("Owner account created on this browser. For a public website, replace this demo login with secure server-side authentication.")};
+$("loginBtn").onclick=()=>{let user=$("loginUser").value.trim(),pass=$("loginPass").value;if(state.auth.owner&&user===state.auth.owner.user&&pass===state.auth.owner.pass){currentUser=user;currentRole="owner"}else{let a=(state.auth.admins||[]).find(x=>x.user===user&&x.pass===pass);if(a){currentUser=user;currentRole="admin"}else{$("loginMessage").textContent="Login did not match an owner or approved admin account.";return}}$("loginMessage").textContent="";checkAuthUI()};
+$("logoutBtn").onclick=()=>{currentUser=null;currentRole=null;checkAuthUI()};
+document.querySelectorAll("[data-admin-tab]").forEach(b=>b.onclick=()=>{document.querySelectorAll(".admin-pane").forEach(p=>p.classList.add("hidden"));$("admin-"+b.dataset.adminTab).classList.remove("hidden");document.querySelectorAll("[data-admin-tab]").forEach(x=>x.classList.toggle("primary",x===b))});
+function renderAdminLists(){
+ $("recordEditor").innerHTML=sortedTeams().map(t=>`<tr><td>${esc(t.name)}</td><td><input aria-label="rank" id="r-${t.id}" type="number" min="1" value="${+t.rank||1}" style="width:60px;background:#0b0a0e;color:white;border:1px solid #39343e;border-radius:7px;padding:7px"></td>${["w","l","t","pf","pa"].map(k=>`<td><input aria-label="${k}" id="${k}-${t.id}" type="number" min="0" value="${+t[k]||0}" style="width:58px;background:#0b0a0e;color:white;border:1px solid #39343e;border-radius:7px;padding:7px"></td>`).join("")}<td><button class="btn small" onclick="saveRecord('${t.id}')">Save</button></td></tr>`).join("");
+ $("teamEditorList").innerHTML=state.teams.map(t=>`<div class="schedule-item"><div>${logo(t)}</div><div class="matchup">${esc(t.name)}<small>${esc(t.ad||"No AD set")} · ${esc(t.tier||"")}</small></div><div class="inline-actions"><button class="btn small" onclick="editTeam('${t.id}')">Edit</button><button class="btn small danger" onclick="deleteTeam('${t.id}')">Delete</button></div></div>`).join("");
+ $("gameEditorList").innerHTML=state.games.map(g=>`<div class="schedule-item"><div class="date">${esc(g.week||"Week 1")}<small>${esc(g.date||"")}</small></div><div class="matchup">${esc(teamById(g.home)?.name||"Home")} vs ${esc(teamById(g.away)?.name||"Away")}<small>${esc(g.status)} ${g.status==="Final"?`· ${esc(g.homeScore)}–${esc(g.awayScore)}`:""}</small></div><div class="inline-actions"><button class="btn small" onclick="editGame('${g.id}')">Edit</button><button class="btn small danger" onclick="deleteGame('${g.id}')">Delete</button></div></div>`).join("")||'<div class="empty">No games yet.</div>';
+ $("playerEditorList").innerHTML=state.players.map(p=>`<div class="schedule-item"><div class="date">${esc(p.pos)}</div><div class="matchup">${esc(p.name)}<small>${esc(teamById(p.team)?.name||"")}</small></div><div class="inline-actions"><button class="btn small" onclick="editPlayer('${p.id}')">Edit</button><button class="btn small danger" onclick="deletePlayer('${p.id}')">Delete</button></div></div>`).join("")||'<div class="empty">No player profiles yet.</div>';
+ $("staffList").innerHTML=(state.auth.admins||[]).map((a,i)=>`<div class="schedule-item"><div class="date">ADMIN</div><div class="matchup">${esc(a.user)}<small>Approved admin</small></div><button class="btn small danger" onclick="removeAdmin(${i})">Revoke role</button></div>`).join("")||'<div class="empty">No additional admins. Only the owner can add staff.</div>';
+}
+window.saveRecord=id=>{let t=teamById(id);if(!t)return;["rank","w","l","t","pf","pa"].forEach(k=>t[k]=Math.max(0,+$("".concat(k==="rank"?"r":k,"-",id)).value||0));save()};
+function clearTeam(){["teamEditId","teamName","teamShort","teamLogo","teamAD"].forEach(id=>$(id).value="");$("teamColor").value="#ff963d";$("teamTier").value="Tier 1"}
+$("clearTeamBtn").onclick=clearTeam;
+$("saveTeamBtn").onclick=()=>{let name=$("teamName").value.trim();if(!name){alert("Enter a team name.");return}let id=$("teamEditId").value,t=id?teamById(id):null;if(!t){t={id:"t"+Date.now(),rank:state.teams.length+1,w:0,l:0,t:0,pf:0,pa:0};state.teams.push(t)}Object.assign(t,{name,short:$("teamShort").value.trim()||name.split(/\s+/).map(x=>x[0]).join("").slice(0,3).toUpperCase(),color:$("teamColor").value,logo:$("teamLogo").value.trim(),ad:$("teamAD").value.trim(),tier:$("teamTier").value});save();clearTeam()};
+window.editTeam=id=>{let t=teamById(id);if(!t)return;$("teamEditId").value=t.id;$("teamName").value=t.name;$("teamShort").value=t.short;$("teamColor").value=t.color||"#ff963d";$("teamLogo").value=t.logo||"";$("teamAD").value=t.ad||"";$("teamTier").value=t.tier||"Tier 1";go("admin");document.querySelector('[data-admin-tab="teams"]').click();$("teamName").focus()};
+window.deleteTeam=id=>{if(!confirm("Delete this team? Existing player and game links may no longer resolve."))return;state.teams=state.teams.filter(t=>t.id!==id);save()};
+function clearGame(){["gameEditId","gameDate","gameLocation","gameHomeScore","gameAwayScore"].forEach(id=>$(id).value="");$("gameWeek").value=state.week||"Week 1";$("gameStatus").value="Scheduled"}
+$("clearGameBtn").onclick=clearGame;
+$("saveGameBtn").onclick=()=>{let home=$("gameHome").value,away=$("gameAway").value;if(!home||!away||home===away){alert("Choose two different teams.");return}let id=$("gameEditId").value,g=state.games.find(x=>x.id===id);if(!g){g={id:"g"+Date.now()};state.games.push(g)}Object.assign(g,{week:$("gameWeek").value.trim()||"Week 1",date:$("gameDate").value.trim(),home,away,homeScore:$("gameHomeScore").value,awayScore:$("gameAwayScore").value,location:$("gameLocation").value.trim(),status:$("gameStatus").value});if(g.status==="Final"&&g.homeScore!==""&&g.awayScore!==""){let h=teamById(home),a=teamById(away);if(h&&a){/* scores are displayed; owner can update records explicitly in Records & Rankings */}}save();clearGame()};
+window.editGame=id=>{let g=state.games.find(x=>x.id===id);if(!g)return;$("gameEditId").value=id;$("gameWeek").value=g.week||"Week 1";$("gameDate").value=g.date||"";$("gameHome").value=g.home;$("gameAway").value=g.away;$("gameHomeScore").value=g.homeScore??"";$("gameAwayScore").value=g.awayScore??"";$("gameLocation").value=g.location||"";$("gameStatus").value=g.status||"Scheduled";document.querySelector('[data-admin-tab="schedule"]').click();$("gameWeek").focus()};
+window.deleteGame=id=>{if(confirm("Delete this scheduled game?")){state.games=state.games.filter(g=>g.id!==id);save()}};
+function clearPlayer(){["playerEditId","playerName"].forEach(id=>$(id).value="");["statPass","statRush","statRec","statTD"].forEach(id=>$(id).value=0);$("playerMr").checked=false}
+$("clearPlayerBtn").onclick=clearPlayer;
+$("savePlayerBtn").onclick=()=>{let name=$("playerName").value.trim();if(!name){alert("Enter a player name.");return}let id=$("playerEditId").value,p=state.players.find(x=>x.id===id);if(!p){p={id:"p"+Date.now()};state.players.push(p)}Object.assign(p,{name,team:$("playerTeam").value,pos:$("playerPos").value,year:$("playerYear").value,pass:+$("statPass").value||0,rush:+$("statRush").value||0,rec:+$("statRec").value||0,td:+$("statTD").value||0,mr:$("playerMr").checked});save();clearPlayer()};
+window.editPlayer=id=>{let p=state.players.find(x=>x.id===id);if(!p)return;$("playerEditId").value=id;$("playerName").value=p.name;$("playerTeam").value=p.team;$("playerPos").value=p.pos;$("playerYear").value=p.year;$("statPass").value=p.pass||0;$("statRush").value=p.rush||0;$("statRec").value=p.rec||0;$("statTD").value=p.td||0;$("playerMr").checked=!!p.mr;document.querySelector('[data-admin-tab="players"]').click();$("playerName").focus()};
+window.deletePlayer=id=>{if(confirm("Delete this player profile?")){state.players=state.players.filter(p=>p.id!==id);save()}};
+$("addAdminBtn").onclick=()=>{if(currentRole!=="owner")return;let user=$("newAdminUser").value.trim(),pass=$("newAdminPass").value;if(!user||pass.length<8){alert("Enter a username and a password with at least 8 characters.");return}if(user===state.auth.owner.user||(state.auth.admins||[]).some(a=>a.user===user)){alert("That username already exists.");return}state.auth.admins.push({user,pass});$("newAdminUser").value="";$("newAdminPass").value="";save()};
+window.removeAdmin=i=>{if(currentRole!=="owner")return;if(confirm("Revoke this admin's access?")){state.auth.admins.splice(i,1);save()}};
+$("changeOwnerPass").onclick=()=>{if(currentRole!=="owner")return;let pass=$("ownerNewPass").value;if(pass.length<8){alert("Use at least 8 characters.");return}state.auth.owner.pass=pass;$("ownerNewPass").value="";save();alert("Owner password changed on this browser.")};
+checkAuthUI();render();
+</script>
+</body>
+</html>
